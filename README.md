@@ -7,7 +7,7 @@ This project explores the application of Bayesian deep generative models and con
 
 ## Team Members
 - **Can Cui:** Focused on the development and implementation of Bayesian deep generative models.
-- **[Member 2 Name]:** Specialized in data preprocessing and implementation of frequentist models including LSTM.
+- **XinRui Wang:** Specialized in data preprocessing and implementation of frequentist models including LSTM.
 
 ## Table of Contents
 - [Data Description](#data-description)
