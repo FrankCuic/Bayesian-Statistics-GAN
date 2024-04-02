@@ -14,31 +14,12 @@ from prettytable import PrettyTable
 warnings.filterwarnings("ignore")
 
 dataset=pd.read_csv(r"C:\Users\TyrantFrank\Desktop\stock.csv",encoding='gb2312')
-# 使用pandas模块的read_csv函数读取名为"农林牧渔.csv"的文件。
-# 参数'encoding'设置为'gbk'，这通常用于读取中文字符，确保文件中的中文字符能够正确读取。
-# 读取的数据被存储在名为'dataset'的DataFrame变量中。
-print(dataset)#显示dataset数据
 
+print(dataset)
 
-# 单输入单步预测，就让values等于某一列数据，n_out = 1，n_in, num_samples, scroll_window 根据自己情况来
-# 单输入多步预测，就让values等于某一列数据，n_out > 1，n_in, num_samples, scroll_window 根据自己情况来
-# 多输入单步预测，就让values等于多列数据，n_out = 1，n_in, num_samples, scroll_window 根据自己情况来
-# 多输入多步预测，就让values等于多列数据，n_out > 1，n_in, num_samples, scroll_window 根据自己情况来
-values = dataset.values[:,1:] #只取第2列数据，要写成1:2；只取第3列数据，要写成2:3，取第2列之后(包含第二列)的所有数据，写成 1：
-# 从dataset DataFrame中提取数据。
-# dataset.values将DataFrame转换为numpy数组。
-# [:,1:]表示选择所有行（:）和从第二列到最后一列（1:）的数据。
-# 这样做通常是为了去除第一列，这在第一列是索引或不需要的数据时很常见。
+values = dataset.values[:,1:]
 
-
-
-# 确保所有数据是浮动的
 values = values.astype('float32')
-# 将values数组中的数据类型转换为float32。
-# 这通常用于确保数据类型的一致性，特别是在准备输入到神经网络模型中时。
-
-
-
 
 def data_collation(data, n_in, n_out, or_dim, scroll_window, num_samples):
     res = np.zeros((num_samples,n_in*or_dim+n_out))
