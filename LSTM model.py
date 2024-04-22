@@ -31,7 +31,7 @@ from tensorflow.keras.models import Model
 from matplotlib import rcParams
 
 
-dataset = pd.read_csv(r"C:\Users\TyrantFrank\Desktop\stock.csv", encoding='gbk')
+dataset = pd.read_csv('AAPL.csv', encoding='gbk')
 
 print(dataset)
 
@@ -139,9 +139,9 @@ def evaluate_forecasts(Ytest, predicted_data, n_out):
         r2 = r2_score(actual, predicted)
         r2_dic.append(r2)
         if n_out == 1:
-            strr = 'prediction result index：'
+            strr = 'prediction result index:'
         else:
-            strr = 'No.'+ str(i + 1)+'step prediction result index：'
+            strr = 'No.'+ str(i + 1)+'step prediction result index:'
         table.add_row([strr, mse, rmse, mae, str(MApe)+'%', str(r2*100)+'%'])
 
     return mse_dic,rmse_dic, mae_dic, mape_dic, r2_dic, table

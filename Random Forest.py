@@ -49,7 +49,6 @@ Ytrain = values[:n_train_number, n_in*or_dim:]
 Xtest = values[n_train_number:, :n_in*or_dim]
 Ytest = values[n_train_number:,  n_in*or_dim:]
 
-# 对训练集和测试集进行归一化
 m_in = MinMaxScaler()
 vp_train = m_in.fit_transform(Xtrain)
 vp_test = m_in.transform(Xtest)
