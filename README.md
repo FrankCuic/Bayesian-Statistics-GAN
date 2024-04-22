@@ -1,6 +1,6 @@
 # Bayesian-Statistics-GAN
 
-Comparative Analysis of Bayesian Deep Generative Models and Frequentist Approaches in Stock Market Analysis
+Comparative Analysis of Bayesian Deep Generative Models and Frequentist Approaches in Stock Market Price Analysis
 
 ## Project Overview
 This project explores the application of Bayesian deep generative models and contrasts them with traditional frequentist approaches such as LSTM in the context of stock market analysis. The aim is to evaluate the predictive performance, uncertainty quantification, and adaptability of these models in forecasting stock prices and identifying market trends.
@@ -35,7 +35,7 @@ The analysis utilizes two primary datasets:
 - Conduct posterior analysis to assess model uncertainty and data fit.
 
 ### Frequentist Regression/Classification Models
-- Employ models like Linear Regression, Logistic Regression, SVM, and LSTM for predictive analysis.
+- Employ models like Random Forest and LSTM-Attention for predictive analysis.
 - Train models on historical stock data to forecast prices and classify market trends.
 
 ### Model Evaluation and Comparison
